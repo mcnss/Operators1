@@ -6,15 +6,13 @@ def get_card():
     card = random.choice(cards)
     return card
 
+
 def calculate_score(hand):
     return sum(hand)
 
 
-
 player_hand = [get_card(), get_card()]
-print(player_hand)
 dealer_hand = [get_card(), get_card()]
-print(dealer_hand)
 print(calculate_score(player_hand), calculate_score(dealer_hand))
 print("Добро пожаловать в игру 21!")
 while True:
@@ -24,7 +22,7 @@ while True:
         print("Вы выиграли! У вас 21.")
         break
     elif player_score > 21:
-        print("Перебор! Диллер проиграл.")
+        print("Перебор! Вы проиграли.")
         break
     action = input("Хотите взять карту?(да/нет)")
     if action.lower() == "да":
