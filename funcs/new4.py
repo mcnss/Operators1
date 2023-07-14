@@ -6,8 +6,8 @@ def checkPassword(my_password):
     for i in my_password:
         if i in big_letters:
             count_big_letters += 1
-            if count_big_letters >= 2:
-                return False
+    if count_big_letters <= 2:
+        return False
     return True
 
 
